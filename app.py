@@ -118,51 +118,91 @@ def clean_text(text):
 # --------------------------------------------------
 # Prediction
 # --------------------------------------------------
+# --------------------------------------------------
+# Prediction
+# --------------------------------------------------
 
 def predict_news(text):
 
-    start=time.perf_counter()
+    start = time.perf_counter()
 
-    cleaned=clean_text(text)
+    cleaned = clean_text(text)
 
-    features=tfidf.transform(
-        [cleaned]
-    ).toarray().astype(np.float32)
+    features = tfidf.transform([cleaned]).toarray().astype(np.float32)
 
-    probability=float(
-        model(
-            features,
-            training=False
-        ).numpy()[0][0]
+    # Use predict() instead of calling the model directly
+    probability = float(
+        model.predict(features, verbose=0)[0][0]
     )
 
-    label="REAL"
+    if probability >= 0.5:
+        label = "REAL"
+        confidence = probability
+    else:
+        label = "FAKE"
+        confidence = 1 - probability
 
-    if probability<0.5:
-        label="FAKE"
+    end = time.perf_counter()
 
-    confidence=probability
-
-    if label=="FAKE":
-        confidence=1-probability
-
-    end=time.perf_counter()
-
-    return{
-
-        "label":label,
-
-        "confidence":confidence,
-
-        "probability":probability,
-
-        "cleaned":cleaned,
-
-        "time":round(
-            (end-start)*1000,
-            2
-        )
+    return {
+        "label": label,
+        "confidence": confidence,
+        "probability": probability,
+        "cleaned": cleaned,
+        "time": round((end - start) * 1000, 2)
     }
+
+
+
+
+
+
+
+
+# def predict_news(text):
+
+#     start=time.perf_counter()
+
+#     cleaned=clean_text(text)
+
+#     features=tfidf.transform(
+#         [cleaned]
+#     ).toarray().astype(np.float32)
+
+#     probability=float(
+#         model(
+#             features,
+#             training=False
+#         ).numpy()[0][0]
+#     )
+
+#     label="REAL"
+
+#     if probability<0.5:
+#         label="FAKE"
+
+#     confidence=probability
+
+#     if label=="FAKE":
+#         confidence=1-probability
+
+#     end=time.perf_counter()
+
+#     return{
+
+#         "label":label,
+
+#         "confidence":confidence,
+
+#         "probability":probability,
+
+#         "cleaned":cleaned,
+
+#         "time":round(
+#             (end-start)*1000,
+#             2
+#         )
+#     }
 
 # --------------------------------------------------
 # Session
