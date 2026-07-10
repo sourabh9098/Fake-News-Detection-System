@@ -155,55 +155,6 @@ def predict_news(text):
 
 
 
-
-
-
-
-# def predict_news(text):
-
-#     start=time.perf_counter()
-
-#     cleaned=clean_text(text)
-
-#     features=tfidf.transform(
-#         [cleaned]
-#     ).toarray().astype(np.float32)
-
-#     probability=float(
-#         model(
-#             features,
-#             training=False
-#         ).numpy()[0][0]
-#     )
-
-#     label="REAL"
-
-#     if probability<0.5:
-#         label="FAKE"
-
-#     confidence=probability
-
-#     if label=="FAKE":
-#         confidence=1-probability
-
-#     end=time.perf_counter()
-
-#     return{
-
-#         "label":label,
-
-#         "confidence":confidence,
-
-#         "probability":probability,
-
-#         "cleaned":cleaned,
-
-#         "time":round(
-#             (end-start)*1000,
-#             2
-#         )
-#     }
-
 # --------------------------------------------------
 # Session
 # --------------------------------------------------
