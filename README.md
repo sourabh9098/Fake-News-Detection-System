@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![TruthLens Banner](Screenshot.png)
+
 
 
 [![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Render-6366F1?style=for-the-badge)]([YOUR_RENDER_LINK_HERE](https://fake-news-detection-system-jt8g.onrender.com/))
