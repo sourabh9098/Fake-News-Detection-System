@@ -58,7 +58,7 @@ User pastes article
 | Kaggle — `clmentbisaillon/fake-and-real-news-dataset` | 21,417 | Real (1) |
 | **Total** | **44,898** | — |
 
-### Step 2 — Data Cleaning
+### Step 2 —> Data Cleaning
 - Removed duplicate articles
 - Lowercased all text
 - Removed URL , punctuation , numbers
