@@ -92,7 +92,7 @@ Dense(1)     →  Sigmoid → probability (0 to 1)
 | Batch Size | 32 |
 | Train/Test Split | 80% / 20% |
 
-### Step 6 — Results
+### Step 6 —> Results
 | Metric | Score |
 |--------|-------|
 | Train Accuracy | 99% |
