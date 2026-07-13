@@ -83,7 +83,7 @@ Dense(16)   →  ReLU + Dropout(0.2)
 Dense(1)     →  Sigmoid → probability (0 to 1)
 ```
 
-### Step 5 — Training
+### Step 5 —> Training
 | Parameter | Value |
 |-----------|-------|
 | Optimizer | Adam |
