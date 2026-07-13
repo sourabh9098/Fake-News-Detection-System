@@ -103,7 +103,7 @@ Dense(1)     →  Sigmoid → probability (0 to 1)
 
 ---
 
-## ⚠️ Data Leakage — Honest Disclosure
+## ⚠️ Data Leakage —> Honest Disclosure
 
 During evaluation, I discovered a **data leakage issue** in this dataset
 
