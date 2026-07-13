@@ -65,14 +65,14 @@ User pastes article
 - Removed stopwords using  NLTK
 - Removed source specific words (reuters , washington , etc.)
 
-### Step 3 — Feature Engineering
+### Step 3 —> Feature Engineering
 ```python
 TfidfVectorizer(max_features=10000)
 # fit_transform on train only → no data leakage
 # transform on test only
 ```
 
-### Step 4 — Model Architecture
+### Step 4 —> Model Architecture
 ```
 Input Layer  →  10,000 TF-IDF features
      ↓
