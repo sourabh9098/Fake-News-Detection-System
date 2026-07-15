@@ -115,7 +115,7 @@ Real news articles consistently started with location patterns like :
 The model was learning to detect the **news source** (Reuters byline)
 rather than the actual **content quality** — which artificially inflated accuracy-
 
-**What I did:-**
+**What I did :-**
 - Identified the top TF-IDF coefficients → `reuters` had coef: 27.594 (highest of all words)
 - Attempted to remove source -  specific patterns and words
 - Retrained and compared models before and after fix
