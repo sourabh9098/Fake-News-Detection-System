@@ -185,7 +185,7 @@ Fed officials indicated they may pause further hikes to assess impact.
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvement
 
 - [ ] Replace TF-IDF with BERT embeddings for better generalization
 - [ ] Add multi-language support
@@ -195,7 +195,7 @@ Fed officials indicated they may pause further hikes to assess impact.
 
 ---
 
-## 👨‍💻 About
+## 👨‍💻 About :
 
 Built by **Sourabh** — CS student passionate about Data Science and ML
 
